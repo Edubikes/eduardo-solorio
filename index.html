@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Eduardo Solorio · Technical Marketer & Growth Engineer</title>
+<meta name="description" content="Eduardo Solorio Rebollo, bilingual Technical Marketer & Growth Engineer in León, Mexico. I put AI and code to work in real businesses: invoicing agents, field-report apps, e-commerce and paid media.">
+<meta name="theme-color" content="#F5F2EB">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Eduardo Solorio · Technical Marketer & Growth Engineer">
+<meta property="og:description" content="AI and code, put to work in real businesses. Case studies: AI invoicing agent, construction field-report app, US seasoning brand, land-investment catalog.">
+<meta property="og:image" content="og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='6' fill='%231F7A4C'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='34' fill='%23F5F2EB' text-anchor='middle'%3EES%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="fonts/newsreader-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/ibm-plex-sans-var.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:"Newsreader";src:url(fonts/newsreader-var.woff2) format("woff2");font-weight:200 800;font-style:normal;font-display:swap}
+@font-face{font-family:"Newsreader";src:url(fonts/newsreader-italic-var.woff2) format("woff2");font-weight:200 800;font-style:italic;font-display:swap}
+@font-face{font-family:"IBM Plex Sans";src:url(fonts/ibm-plex-sans-var.woff2) format("woff2");font-weight:100 700;font-display:swap}
+@font-face{font-family:"IBM Plex Mono";src:url(fonts/ibm-plex-mono-400-normal.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"IBM Plex Mono";src:url(fonts/ibm-plex-mono-500-normal.woff2) format("woff2");font-weight:500;font-display:swap}
+:root{
+  --paper:#F5F2EB;--paper-2:#EDE8DD;--white:#FCFBF8;
+  --ink:#151515;--ink-2:#3B3832;--dim:#6B655B;--line:#DAD2C3;--line-2:#C9BFAC;
+  --brand:#1F7A4C;--brand-d:#17603B;--brand-tint:#E4EEE6;--gold:#B08A3E;
+  --serif:"Newsreader","Iowan Old Style",Georgia,serif;
+  --sans:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+  --wrap:1200px;--g:clamp(20px,4vw,48px);--sec:clamp(72px,9vw,128px);
+  --ease:cubic-bezier(.22,1,.36,1)
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 1rem/1.6 var(--sans);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+img,svg{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3,h4,p,ul,ol,dl,dd,figure,blockquote{margin:0;padding:0}
+ul,ol{list-style:none}
+::selection{background:var(--brand);color:#fff}
+:focus-visible{outline:2px solid var(--brand);outline-offset:3px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--ink);color:#fff;padding:8px 12px;z-index:99}
+.skip:focus{left:8px}
+.wrap{max-width:calc(var(--wrap) + var(--g)*2);margin-inline:auto;padding-inline:var(--g)}
+.sec{padding-block:var(--sec);border-top:1px solid var(--line)}
+.eyebrow{font:500 .72rem/1.4 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--dim)}
+.eyebrow .n{color:var(--brand)}
+.h1{font-family:var(--serif);font-weight:400;font-size:clamp(2.6rem,7vw,6.2rem);line-height:.98;letter-spacing:-.028em;text-wrap:balance}
+.h2{font-family:var(--serif);font-weight:400;font-size:clamp(2rem,4vw,3.4rem);line-height:1.04;letter-spacing:-.02em;text-wrap:balance}
+.h3{font-family:var(--serif);font-weight:400;font-size:clamp(1.6rem,2.8vw,2.4rem);line-height:1.08;letter-spacing:-.015em;text-wrap:balance}
+.h1 em,.h2 em,.h3 em{font-style:italic;color:var(--brand)}
+.lead{font-size:clamp(1.06rem,1.4vw,1.24rem);line-height:1.55;color:var(--ink-2);max-width:34em;text-wrap:pretty}
+.body{color:var(--ink-2);text-wrap:pretty}
+.body p+p{margin-top:.9em}
+.small{font-size:.875rem;color:var(--dim);line-height:1.55}
+.btn{display:inline-flex;align-items:center;gap:12px;min-height:50px;padding:0 22px;border-radius:2px;border:1px solid transparent;font:500 .95rem var(--sans);text-decoration:none;cursor:pointer;transition:background-color .2s var(--ease),border-color .2s var(--ease),color .2s}
+.btn--primary{background:var(--brand);color:#fff}
+.btn--primary:hover{background:var(--brand-d)}
+.btn--ghost{border-color:var(--line-2);color:var(--ink);background:transparent}
+.btn--ghost:hover{border-color:var(--ink)}
+.arrow{transition:transform .2s var(--ease)}
+.btn:hover .arrow,a:hover>.arrow{transform:translateX(3px)}
+.link{text-decoration:none;background:linear-gradient(currentColor,currentColor) 0 100%/100% 1px no-repeat;padding-bottom:2px;transition:background-size .3s var(--ease)}
+.link:hover{background-size:0 1px;background-position:100% 100%}
+.chip{display:inline-block;font:400 .74rem/1 var(--mono);color:var(--ink-2);border:1px solid var(--line-2);padding:6px 9px;border-radius:2px;white-space:nowrap}
+
+/* top */
+.top{position:sticky;top:0;z-index:30;background:rgba(245,242,235,.9);-webkit-backdrop-filter:saturate(1.2) blur(10px);backdrop-filter:saturate(1.2) blur(10px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:62px;gap:16px}
+.brand{display:flex;align-items:baseline;gap:12px;text-decoration:none;min-width:0}
+.brand b{font-family:var(--serif);font-weight:500;font-size:1.18rem;letter-spacing:-.01em;white-space:nowrap}
+.brand span{font:400 .7rem var(--mono);color:var(--dim);letter-spacing:.08em;text-transform:uppercase;white-space:nowrap}
+.nav{display:none;gap:26px;font-size:.9rem}
+.nav a{text-decoration:none;color:var(--ink-2)}
+.nav a:hover{color:var(--brand)}
+.tools{display:flex;align-items:center;gap:10px}
+.lang{display:inline-flex;border:1px solid var(--line-2);border-radius:2px;overflow:hidden}
+.lang button{font:500 .7rem/1 var(--mono);letter-spacing:.08em;padding:9px 9px;border:0;background:transparent;color:var(--dim);cursor:pointer}
+.lang button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+.top .btn{min-height:36px;padding:0 14px;font-size:.84rem;display:none}
+@media(min-width:620px){.top .btn{display:inline-flex}}
+@media(min-width:980px){.nav{display:flex}}
+@media(max-width:520px){.brand span{display:none}}
+
+/* hero */
+.hero{padding-top:clamp(40px,7vw,96px);padding-bottom:clamp(48px,6vw,80px)}
+.rule{display:flex;justify-content:space-between;gap:16px;padding-bottom:16px;border-bottom:1px solid var(--ink);margin-bottom:clamp(32px,5vw,64px)}
+.hero-grid{display:grid;gap:36px}
+.kicker{display:flex;flex-wrap:wrap;gap:4px 14px;align-items:baseline;margin-top:clamp(20px,3vw,36px);padding-top:16px;border-top:1px solid var(--line);max-width:34em}.kicker b{font-family:var(--serif);font-weight:500;font-size:1.15rem}.kicker span{font:500 .72rem var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--brand)}
+.hero-side{display:grid;grid-template-columns:112px 1fr;gap:20px;align-items:start}
+.portrait{position:relative}
+.portrait img{width:112px;aspect-ratio:4/5;object-fit:cover;border-radius:2px;filter:saturate(.8) contrast(1.02)}
+.portrait figcaption{font:400 .66rem/1.3 var(--mono);color:var(--dim);margin-top:8px;letter-spacing:.04em}
+.ctas{display:flex;flex-wrap:wrap;gap:12px 22px;align-items:center;margin-top:28px}
+.meta{display:grid;grid-template-columns:1fr 1fr;margin-top:clamp(44px,6vw,80px);border-top:1px solid var(--line)}
+.meta div{padding:16px 16px 16px 0;border-bottom:1px solid var(--line)}
+.meta div:nth-child(even){padding-left:16px;border-left:1px solid var(--line)}
+.meta dt{font:500 .66rem var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--dim);margin-bottom:5px}
+.meta dd{font-size:.95rem}
+@media(min-width:900px){
+  .hero-grid{grid-template-columns:repeat(12,1fr);column-gap:32px}
+  .hero-main{grid-column:1/9}
+  .hero-aside{grid-column:9/13;align-self:end}
+  .hero-side{grid-template-columns:1fr;gap:24px}
+  .portrait img{width:136px}
+  .meta{grid-template-columns:repeat(4,1fr)}
+  .meta div{border-bottom:0;padding:18px 20px 0 0}
+  .meta div+div{padding-left:20px;border-left:1px solid var(--line)}
+}
+
+/* index of work */
+.toc{margin-top:clamp(28px,4vw,48px);border-top:1px solid var(--ink)}
+.toc a{display:grid;grid-template-columns:2.2em 1fr auto;gap:6px 12px;align-items:baseline;padding:20px 0;border-bottom:1px solid var(--line);text-decoration:none;transition:background-color .25s var(--ease),padding .25s var(--ease)}
+.toc a:hover{background:var(--white);padding-inline:12px}
+.toc .no{font:500 .74rem var(--mono);color:var(--brand);grid-column:1;grid-row:1}
+.toc .t{font-family:var(--serif);font-size:clamp(1.3rem,2.4vw,1.9rem);line-height:1.15;letter-spacing:-.01em;grid-column:2/4;grid-row:1}
+.toc .s{font:400 .72rem var(--mono);color:var(--dim);letter-spacing:.04em;text-transform:uppercase;grid-column:2;grid-row:2}
+.toc .y{font:400 .74rem var(--mono);color:var(--dim);grid-column:3;grid-row:2;white-space:nowrap}
+@media(min-width:760px){.toc a{grid-template-columns:3em 1.4fr 1fr 6em auto;gap:4px 16px}.toc .no,.toc .t,.toc .s,.toc .y{grid-column:auto;grid-row:auto}}
+.toc .ar{display:none}
+@media(min-width:760px){.toc .ar{display:block;color:var(--brand)}}
+.approach{display:grid;gap:28px;margin-top:clamp(40px,6vw,72px)}
+.approach > p{font-family:var(--serif);font-size:clamp(1.3rem,2.2vw,1.8rem);line-height:1.3;letter-spacing:-.01em;color:var(--ink);max-width:30em;text-wrap:pretty}
+.approach > p em{color:var(--brand)}
+.tools-used{display:flex;flex-wrap:wrap;gap:8px;align-content:start}
+@media(min-width:900px){.approach{grid-template-columns:8fr 4fr;gap:48px}}
+
+/* case */
+.case-head{display:grid;gap:20px;margin-bottom:clamp(32px,5vw,56px)}
+.case-head .top-line{display:flex;justify-content:space-between;gap:16px;padding-bottom:14px;border-bottom:1px solid var(--ink)}
+.case-head .h2{max-width:16em}
+.case-head .client{font-size:.98rem;color:var(--ink-2);max-width:40em;text-wrap:pretty}
+@media(min-width:900px){.case-head{grid-template-columns:repeat(12,1fr);column-gap:32px;row-gap:28px}.case-head .top-line{grid-column:1/-1}.case-head .h2{grid-column:1/8;max-width:none}.case-head .client{grid-column:9/13;align-self:end}}
+.pbr{display:grid;border-top:1px solid var(--line)}
+.pbr > div{padding:22px 0;border-bottom:1px solid var(--line)}
+.pbr h4{font:500 .7rem var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--brand);margin-bottom:10px}
+.pbr p,.pbr li{color:var(--ink-2);font-size:.98rem;text-wrap:pretty}
+.pbr li{padding-left:16px;position:relative;margin-top:6px}
+.pbr li::before{content:"";position:absolute;left:0;top:.72em;width:7px;height:1px;background:var(--ink)}
+@media(min-width:900px){.pbr{grid-template-columns:1fr 1.25fr 1fr}.pbr > div{padding:24px 28px 24px 0;border-bottom:0}.pbr > div+div{padding-left:28px;border-left:1px solid var(--line)}}
+.stack{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+.kpis{display:grid;grid-template-columns:1fr 1fr;gap:0}
+.kpi{padding:4px 16px 0 0}
+.kpi+.kpi{padding-left:16px;border-left:1px solid var(--line)}
+.kpi b{display:block;font-family:var(--serif);font-weight:400;font-size:clamp(2.8rem,5vw,4.2rem);line-height:1;letter-spacing:-.03em;color:var(--brand)}
+.kpi span{display:block;font-size:.86rem;color:var(--ink-2);margin-top:8px;line-height:1.4}
+.fig{margin-top:clamp(32px,4vw,48px)}
+.cap{font:400 .74rem/1.5 var(--mono);color:var(--dim);letter-spacing:.02em;margin-top:12px;display:flex;gap:12px}
+.cap b{font-weight:500;color:var(--ink);white-space:nowrap}
+.frame{border-radius:3px;overflow:hidden;box-shadow:0 0 0 1px rgba(0,0,0,.08),0 30px 60px -30px rgba(40,30,10,.35)}
+.browser{background:var(--white);border-radius:4px;overflow:hidden;box-shadow:0 0 0 1px rgba(0,0,0,.08),0 40px 80px -40px rgba(40,30,10,.45)}
+.browser .bar{display:flex;align-items:center;gap:6px;height:30px;padding:0 12px;border-bottom:1px solid var(--line)}
+.browser .bar i{width:8px;height:8px;border-radius:50%;background:var(--line-2)}
+.browser .bar span{margin-left:12px;font:400 .7rem var(--mono);color:var(--dim);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+
+/* flow (case 1) */
+.flow{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--ink)}
+.flow li{padding:20px 16px 20px 0;border-bottom:1px solid var(--line)}
+.flow li:nth-child(even){padding-left:16px;border-left:1px solid var(--line)}
+.flow .no{font:500 .72rem var(--mono);color:var(--brand);letter-spacing:.08em}
+.flow .ill{height:84px;margin:14px 0}
+.flow .ill svg{height:100%;width:auto}
+.flow b{display:block;font-family:var(--serif);font-weight:500;font-size:1.15rem;line-height:1.2}
+.flow p{font-size:.88rem;color:var(--ink-2);margin-top:6px}
+@media(min-width:900px){.flow{grid-template-columns:repeat(4,1fr)}.flow li{border-bottom:0;padding:24px 24px 8px 0}.flow li+li{padding-left:24px;border-left:1px solid var(--line)}.flow .ill{height:112px}}
+.receipts{margin-top:clamp(28px,4vw,44px);display:grid;gap:24px;align-items:end}
+@media(min-width:900px){.receipts{grid-template-columns:7fr 5fr;gap:48px}}
+
+/* case 2 gallery */
+.gal{display:grid;gap:20px;background:var(--paper-2);padding:clamp(20px,4vw,48px);border-radius:3px}
+.gal figure{margin:0}
+.gal .dash{max-width:520px}
+.gal .phone{width:200px;border-radius:28px;background:#1b1b1b;padding:8px;box-shadow:0 30px 60px -30px rgba(40,30,10,.5)}
+.gal .phone img{border-radius:21px}
+.gal .col{display:grid;gap:20px;align-content:start}
+@media(min-width:760px){.gal{grid-template-columns:minmax(0,520px) auto;justify-content:center;align-items:start;gap:clamp(24px,4vw,64px)}.gal .col{grid-column:2;grid-row:1/3}.gal .dash{grid-column:1}}
+
+/* case 3 */
+.cho{display:grid;gap:20px}
+.cho .side{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:start}
+@media(min-width:900px){.cho{grid-template-columns:8fr 4fr;gap:28px}.cho .side{grid-template-columns:1fr}}
+.cho .mob{width:100%;max-width:240px;border-radius:26px;background:#1b1b1b;padding:7px}
+.cho .mob img{border-radius:20px}
+.status{display:inline-flex;align-items:center;gap:8px;font:500 .7rem var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(176,138,62,.45);padding:5px 10px;border-radius:2px}
+.status::before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor}
+
+/* case 4 */
+.map{background:var(--white);border:1px solid var(--line);border-radius:3px;padding:clamp(16px,3vw,32px);display:grid;gap:24px}
+@media(min-width:900px){.map{grid-template-columns:1.5fr 1fr;align-items:center}}
+.lotcard{border-top:1px solid var(--ink)}
+.lotcard .row{display:grid;grid-template-columns:5.5em 1fr;gap:12px;align-items:center;padding:12px 0;border-bottom:1px solid var(--line);font:400 .78rem var(--mono);color:var(--dim);text-transform:uppercase;letter-spacing:.06em}
+.lotcard .bar{height:8px;background:var(--paper-2);border-radius:1px;position:relative;overflow:hidden}
+.lotcard .bar i{position:absolute;inset:0 auto 0 0;background:var(--line-2)}
+.lotcard .row.roi .bar i{background:var(--brand)}
+.lotcard h5{margin:0 0 12px;font:500 .72rem var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--ink)}
+
+/* more */
+.more{display:grid;gap:0;border-top:1px solid var(--ink);margin-top:clamp(28px,4vw,40px)}
+.more li{padding:22px 0;border-bottom:1px solid var(--line)}
+.more b{display:block;font-family:var(--serif);font-weight:500;font-size:1.25rem;line-height:1.2;margin:8px 0 8px}
+.more p{font-size:.93rem;color:var(--ink-2)}
+@media(min-width:900px){.more{grid-template-columns:repeat(3,1fr)}.more li{border-bottom:0;padding:24px 28px 8px 0}.more li+li{padding-left:28px;border-left:1px solid var(--line)}}
+
+/* NZ */
+.nz{background:var(--paper-2)}
+.nz-grid{display:grid;gap:32px}
+@media(min-width:900px){.nz-grid{grid-template-columns:7fr 5fr;gap:64px;align-items:end}}
+.ladder{border-top:1px solid var(--ink)}
+.ladder li{display:grid;grid-template-columns:4.2em 1fr;gap:12px;padding:16px 0;border-bottom:1px solid var(--line-2);align-items:baseline}
+.ladder span{font:400 .74rem var(--mono);color:var(--dim)}
+.ladder b{font-family:var(--serif);font-weight:400;font-size:1.3rem}
+.ladder li:last-child b{color:var(--brand);font-style:italic}
+.ladder p{grid-column:2;font-size:.9rem;color:var(--ink-2)}
+
+/* skills */
+.skills{display:grid;border-top:1px solid var(--ink);margin-top:clamp(28px,4vw,48px)}
+.skills > div{padding:22px 0;border-bottom:1px solid var(--line)}
+.skills h3{font:500 .72rem var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--brand);margin-bottom:14px}
+.skills ul{display:flex;flex-wrap:wrap;gap:8px}
+@media(min-width:760px){.skills{grid-template-columns:1fr 1fr}.skills > div{padding:24px 28px 24px 0}.skills > div:nth-child(even){padding-left:28px;border-left:1px solid var(--line)}}
+@media(min-width:1100px){.skills{grid-template-columns:repeat(4,1fr)}.skills > div{border-bottom:0}.skills > div+div{padding-left:28px;border-left:1px solid var(--line)}}
+.timeline{margin-top:clamp(40px,6vw,72px);border-top:1px solid var(--line)}
+.timeline li{display:grid;grid-template-columns:1fr;gap:2px 24px;padding:14px 0;border-bottom:1px solid var(--line)}
+.timeline .y{font:400 .76rem var(--mono);color:var(--dim)}
+.timeline .r{font-weight:500}
+.timeline .o{color:var(--dim);font-size:.92rem}
+@media(min-width:760px){.timeline li{grid-template-columns:9em 1.3fr 1fr;align-items:baseline}}
+
+/* contact */
+.contact{background:var(--brand);color:#F5F2EB;border-top:0}
+.contact .eyebrow{color:rgba(245,242,235,.7)}
+.contact .h1{color:#fff;max-width:12em}
+.contact .h1 em{color:#F5F2EB;opacity:.85}
+.contact .lead{color:rgba(245,242,235,.88)}
+.clist{display:grid;margin-top:clamp(36px,5vw,64px);border-top:1px solid rgba(245,242,235,.5)}
+.clist a{display:grid;grid-template-columns:1fr auto;gap:4px 16px;padding:20px 0;border-bottom:1px solid rgba(245,242,235,.25);text-decoration:none;align-items:baseline}
+.clist .k{font:500 .68rem var(--mono);letter-spacing:.1em;text-transform:uppercase;color:rgba(245,242,235,.65);grid-column:1/-1}
+.clist .v{font-family:var(--serif);font-size:clamp(1.2rem,2.4vw,1.8rem);line-height:1.2;word-break:break-word}
+.clist a:hover .v{text-decoration:underline;text-underline-offset:5px;text-decoration-thickness:1px}
+@media(min-width:900px){.clist{grid-template-columns:1fr 1fr;column-gap:48px}}
+.btn--light{background:#F5F2EB;color:var(--brand)}
+.btn--light:hover{background:#fff}
+.btn--line{border-color:rgba(245,242,235,.55);color:#fff}
+.btn--line:hover{border-color:#fff}
+footer{background:var(--brand);color:rgba(245,242,235,.7);border-top:1px solid rgba(245,242,235,.25)}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;padding-block:22px;font:400 .72rem var(--mono);letter-spacing:.04em}
+@media print{.top,.lang{display:none}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top"><b>Eduardo Solorio</b><span data-i="role">Technical Marketer &amp; Growth Engineer</span></a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#work" data-i="nWork">Work</a><a href="#about" data-i="nAbout">About</a><a href="#skills" data-i="nSkills">Skills</a><a href="#contact" data-i="nContact">Contact</a>
+    </nav>
+    <div class="tools">
+      <div class="lang" role="group" aria-label="Language"><button type="button" data-set="en" aria-pressed="true">EN</button><button type="button" data-set="es" aria-pressed="false">ES</button></div>
+      <a class="btn btn--primary" href="Eduardo_Solorio_CV_EN.pdf" download data-i="cvBtn">Download CV</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+<section class="hero" id="top">
+  <div class="wrap">
+    <div class="rule eyebrow"><span><span class="n">Portfolio</span> · 2026</span><span data-i="loc">León, MX · Remote</span></div>
+    <div class="hero-grid">
+      <div class="hero-main"><h1 class="h1" data-i="h1">AI and code, <em>put to work</em> in real businesses.</h1><p class="kicker"><b>Eduardo Solorio Rebollo</b><span data-i="role2">Technical Marketer &amp; Growth Engineer</span></p></div>
+      <div class="hero-aside">
+        <div class="hero-side">
+          <figure class="portrait"><img src="img/eduardo.webp" width="560" height="700" alt="Portrait of Eduardo Solorio"></figure>
+          <p class="lead" data-i="lead">I'm a bilingual Technical Marketer &amp; Growth Engineer. I sit between AI tools and the businesses that still run on paper and WhatsApp (construction, logistics, marketing) and ship things that work on Monday morning.</p>
+        </div>
+        <div class="ctas">
+          <a class="btn btn--primary" href="#work"><span data-i="ctaWork">See the work</span> <span class="arrow" aria-hidden="true">→</span></a>
+          <a class="link" href="mailto:edusolorior7@gmail.com">edusolorior7@gmail.com</a>
+        </div>
+      </div>
+    </div>
+    <dl class="meta">
+      <div><dt data-i="mBased">Based in</dt><dd data-i="mBasedV">León, Guanajuato, MX</dd></div>
+      <div><dt data-i="mLang">Languages</dt><dd data-i="mLangV">English &amp; Spanish, bilingual</dd></div>
+      <div><dt data-i="mEdu">Education</dt><dd data-i="mEduV">BA Marketing &amp; Advertising, Ibero León, 2026</dd></div>
+      <div><dt data-i="mWork">Works</dt><dd data-i="mWorkV">Remote, async-first</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="sec" id="work">
+  <div class="wrap">
+    <p class="eyebrow"><span class="n">§ 01</span> · <span data-i="selWork">Selected work</span></p>
+    <nav class="toc" aria-label="Case studies">
+      <a href="#case-invoices"><span class="no">01</span><span class="t" data-i="t1">Receipt photo to tax invoice, by AI agent</span><span class="s">SICESA · <span data-i="sConst">Construction</span></span><span class="y">2025–26</span><span class="ar" aria-hidden="true">→</span></a>
+      <a href="#case-app"><span class="no">02</span><span class="t" data-i="t2">Field-report app for construction sites</span><span class="s">SICESA · <span data-i="sConst2">Construction</span></span><span class="y">2025–26</span><span class="ar" aria-hidden="true">→</span></a>
+      <a href="#case-chololoy"><span class="no">03</span><span class="t" data-i="t3">Content, site and ads for a US seasoning brand</span><span class="s">Chololoy · <span data-i="sFood">Food / CPG</span></span><span class="y">2026–</span><span class="ar" aria-hidden="true">→</span></a>
+      <a href="#case-tampico"><span class="no">04</span><span class="t" data-i="t4">Land-investment catalog with a 3D map</span><span class="s">Tampico Terrenos · <span data-i="sRE">Real estate</span></span><span class="y">2026</span><span class="ar" aria-hidden="true">→</span></a>
+    </nav>
+    <div class="approach">
+      <p data-i="approach">I build with AI coding tools, and I say so openly. <em>My edge isn't typing code faster;</em> it's knowing the business problem, directing the AI precisely, and checking the result where it's actually used: on a job site, in a WhatsApp group, in an ad account.</p>
+      <div>
+        <p class="eyebrow" style="margin-bottom:12px" data-i="daily">Daily tools</p>
+        <div class="tools-used"><span class="chip">Claude Code</span><span class="chip">Gemini</span><span class="chip">Antigravity IDE</span><span class="chip">Next.js</span><span class="chip">Firebase</span><span class="chip">Python</span><span class="chip">Vercel</span><span class="chip">Meta Ads</span><span class="chip">Google Ads</span><span class="chip">Power BI</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CASE 01 -->
+<section class="sec" id="case-invoices">
+  <div class="wrap">
+    <div class="case-head">
+      <div class="top-line eyebrow"><span><span class="n">Case 01</span> · SICESA Constructora</span><span>2025 – 2026</span></div>
+      <h2 class="h2" data-i="c1h">Petty-cash receipts that <em>invoice themselves.</em></h2>
+      <p class="client" data-i="c1c">SICESA is a construction company in Mexico. Field staff pay for fuel, hardware and supplies from petty cash, and every receipt needs a CFDI tax invoice.</p>
+    </div>
+    <div class="pbr">
+      <div><h4 data-i="lProb">Problem</h4><p data-i="c1p">Each CFDI has to be requested on the merchant's own web portal, one receipt at a time. Paper receipts travel in pockets, and invoices get lost along the way.</p></div>
+      <div><h4 data-i="lBuilt">What I built</h4>
+        <ul>
+          <li data-i="c1b1">An AI-agent workflow around the tool staff already use: a WhatsApp group.</li>
+          <li data-i="c1b2">Staff send a photo of the receipt. The agent reads it and issues the CFDI on that merchant's portal.</li>
+          <li data-i="c1b3">The invoice PDF is posted back in the same chat.</li>
+          <li data-i="c1b4">Every week it builds the petty-cash report in Excel.</li>
+        </ul>
+      </div>
+      <div><h4 data-i="lRes">Result</h4>
+        <div class="kpis">
+          <div class="kpi"><b>2+</b><span data-i="k1">hours saved every week</span></div>
+          <div class="kpi"><b>0</b><span data-i="k2">lost invoices</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="fig">
+      <ol class="flow">
+        <li><span class="no">01</span><div class="ill"><svg aria-hidden="true" viewBox="0 0 120 128" fill="none" stroke="#151515" stroke-width="1.4"><rect x="30" y="8" width="60" height="112" rx="10"/><line x1="52" y1="15" x2="68" y2="15"/><path d="M44 36h32v50l-4-3-4 3-4-3-4 3-4-3-4 3-4-3-4 3z" fill="#FCFBF8"/><line x1="50" y1="46" x2="70" y2="46" stroke="#6B655B"/><line x1="50" y1="54" x2="66" y2="54" stroke="#6B655B"/><line x1="50" y1="62" x2="70" y2="62" stroke="#6B655B"/><rect x="50" y="68" width="8" height="8" fill="#151515"/><circle cx="60" cy="104" r="7" stroke="#1F7A4C" stroke-width="1.8"/><path d="M34 28h8M34 28v8M86 28h-8M86 28v8M34 94h8M34 94v-8M86 94h-8M86 94v-8" stroke="#1F7A4C" stroke-width="1.8"/></svg></div><b data-i="f1">Photo</b><p data-i="f1p">Staff snap the receipt. That's their whole job.</p></li>
+        <li><span class="no">02</span><div class="ill"><svg aria-hidden="true" viewBox="0 0 150 128" fill="none" stroke="#151515" stroke-width="1.4"><path d="M10 30a10 10 0 0 1 10-10h62a10 10 0 0 1 10 10v30a10 10 0 0 1-10 10H34l-14 12V70a10 10 0 0 1-10-10z" fill="#FCFBF8"/><rect x="20" y="30" width="22" height="30" fill="#EDE8DD"/><line x1="50" y1="36" x2="82" y2="36"/><line x1="50" y1="46" x2="76" y2="46"/><path d="M58 64a10 10 0 0 1 10-10h62a10 10 0 0 1 10 10v26a10 10 0 0 1-10 10v12l-14-12H68a10 10 0 0 1-10-10z" fill="#E4EEE6" stroke="#1F7A4C"/><line x1="70" y1="70" x2="126" y2="70" stroke="#1F7A4C"/><line x1="70" y1="80" x2="112" y2="80" stroke="#1F7A4C"/><line x1="70" y1="90" x2="100" y2="90" stroke="#1F7A4C"/></svg></div><b data-i="f2">WhatsApp</b><p data-i="f2p">Sent to the group they already use. No new app.</p></li>
+        <li><span class="no">03</span><div class="ill"><svg aria-hidden="true" viewBox="0 0 150 128" fill="none" stroke="#151515" stroke-width="1.4"><rect x="8" y="14" width="134" height="100" rx="3" fill="#FCFBF8"/><line x1="8" y1="30" x2="142" y2="30"/><circle cx="18" cy="22" r="2.4"/><circle cx="26" cy="22" r="2.4"/><circle cx="34" cy="22" r="2.4"/><line x1="22" y1="44" x2="60" y2="44" stroke="#6B655B"/><rect x="22" y="50" width="106" height="11" rx="1"/><line x1="22" y1="72" x2="52" y2="72" stroke="#6B655B"/><rect x="22" y="78" width="106" height="11" rx="1"/><rect x="92" y="96" width="36" height="11" rx="1" fill="#1F7A4C" stroke="#1F7A4C"/><path d="M26 55.5h40M26 83.5h28" stroke="#1F7A4C" stroke-width="2"/></svg></div><b data-i="f3">CFDI issued</b><p data-i="f3p">The agent fills the merchant's invoicing portal.</p></li>
+        <li><span class="no">04</span><div class="ill"><svg aria-hidden="true" viewBox="0 0 150 128" fill="none" stroke="#151515" stroke-width="1.4"><path d="M14 16h40l14 14v68H14z" fill="#FCFBF8"/><path d="M54 16v14h14"/><rect x="22" y="44" width="22" height="12" fill="#D9432F" stroke="none"/><line x1="22" y1="66" x2="58" y2="66" stroke="#6B655B"/><line x1="22" y1="74" x2="52" y2="74" stroke="#6B655B"/><rect x="72" y="36" width="66" height="76" rx="2" fill="#FCFBF8"/><path d="M72 50h66M72 64h66M72 78h66M72 92h66M94 36v76M116 36v76" stroke="#C9BFAC"/><rect x="72" y="36" width="66" height="14" fill="#E4EEE6" stroke="#1F7A4C"/></svg></div><b data-i="f4">PDF + Excel</b><p data-i="f4p">PDF back in the chat; weekly petty-cash report.</p></li>
+      </ol>
+    </div>
+    <div class="receipts">
+      <figure><div class="frame"><img src="img/receipts-week-blurred.jpg" width="1024" height="353" loading="lazy" alt="A week of real petty-cash receipts, blurred so no data is readable"></div><figcaption class="cap"><b>Fig. 1</b><span data-i="fig1">One real week of receipts, blurred on purpose: no tax IDs, amounts or folios.</span></figcaption></figure>
+      <figure><div class="frame"><img src="img/obra-canopy.webp" width="1024" height="448" loading="lazy" alt="A service-station canopy SICESA built, lit green at night"></div><figcaption class="cap"><b>Fig. 2</b><span data-i="fig2">The kind of site these receipts come from.</span></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- CASE 02 -->
+<section class="sec" id="case-app">
+  <div class="wrap">
+    <div class="case-head">
+      <div class="top-line eyebrow"><span><span class="n">Case 02</span> · SICESA App</span><span>2025 – 2026</span></div>
+      <h2 class="h2" data-i="c2h">Every job site, <em>one screen,</em> one weekly PDF.</h2>
+      <p class="client" data-i="c2c">An installable web app for site engineers, the office and the client, built with AI coding tools on a production stack. <a class="link" href="https://sicesa-app.vercel.app" target="_blank" rel="noopener">sicesa-app.vercel.app</a></p>
+    </div>
+    <div class="pbr">
+      <div><h4 data-i="lProb2">Problem</h4><p data-i="c2p">Progress lived in site photos scattered across phones and chats. Turning them into a report took hours of manual documentation, and clients had to phone in to ask how their project was going.</p></div>
+      <div><h4 data-i="lBuilt2">What I built</h4>
+        <ul>
+          <li data-i="c2b1">A company-wide <b>“all projects”</b> dashboard: progress, who is on which site, and which sites haven't sent photos.</li>
+          <li data-i="c2b2">A <b>client view</b> where each client sees only their own project.</li>
+          <li data-i="c2b3">A one-tap <b>weekly PDF report</b> with photos, compressed in the browser.</li>
+          <li data-i="c2b4">Daily site log, incidents, Excel-style budgets with automatic VAT, materials approval and role-based access.</li>
+        </ul>
+      </div>
+      <div><h4 data-i="lRes2">Result</h4><p data-i="c2r">Engineers upload photos from the field and the executive report is generated automatically, replacing hours of manual documentation. Clients follow progress in one tracking channel instead of calling.</p>
+        <div class="stack"><span class="chip">Next.js 14</span><span class="chip">TypeScript</span><span class="chip">Tailwind / shadcn</span><span class="chip">Firebase</span><span class="chip">PWA</span><span class="chip">Vercel</span></div>
+      </div>
+    </div>
+    <div class="fig">
+      <div class="gal">
+        <figure class="dash"><div class="frame"><img src="img/sicesa-dashboard.webp" width="510" height="570" loading="lazy" alt="SICESA App: all-projects dashboard with progress per site and missing-report alerts"></div><figcaption class="cap"><b>Fig. 3</b><span data-i="fig3">“All projects” dashboard. Demo mode, sample data.</span></figcaption></figure>
+        <figure class="dash"><div class="frame"><img src="img/sicesa-client.webp" width="510" height="200" loading="lazy" alt="SICESA App client view showing only the client's own project"></div><figcaption class="cap"><b>Fig. 5</b><span data-i="fig5">Client view: a client sees only their own project.</span></figcaption></figure>
+        <div class="col">
+          <figure><div class="phone"><img src="img/sicesa-pdf-mobile.webp" width="256" height="605" loading="lazy" alt="SICESA App on mobile: project page with the weekly PDF report ready"></div><figcaption class="cap"><b>Fig. 4</b><span data-i="fig4">Weekly PDF, ready on mobile.</span></figcaption></figure>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CASE 03 -->
+<section class="sec" id="case-chololoy">
+  <div class="wrap">
+    <div class="case-head">
+      <div class="top-line eyebrow"><span><span class="n">Case 03</span> · Chololoy</span><span data-i="c3y">2026 – present</span></div>
+      <h2 class="h2" data-i="c3h">A family seasoning, <em>told one recipe at a time.</em></h2>
+      <p class="client" data-i="c3c">Chololoy is a Mexican seasoning brand sold in the United States, mostly to restaurant kitchens. Freelance project covering marketing and web.</p>
+    </div>
+    <div class="pbr">
+      <div><h4 data-i="lProb3">Problem</h4><p data-i="c3p">A product that grew by word of mouth needed short-form content and a website built for US chefs, buyers and home cooks.</p></div>
+      <div><h4 data-i="lBuilt3">What I'm doing</h4>
+        <ul>
+          <li data-i="c3b1">Producing and editing short-form culinary videos for social media (Premiere, CapCut).</li>
+          <li data-i="c3b2">Rebuilding the website: bilingual story, recipe library, product page and wholesale inquiries.</li>
+          <li data-i="c3b3">Running Meta &amp; Google Ads for US distribution.</li>
+          <li data-i="c3b4">Reporting performance in Power BI.</li>
+        </ul>
+      </div>
+      <div><h4 data-i="lRes3">Status</h4><p style="margin-bottom:14px"><span class="status" data-i="c3s">In progress</span></p><p data-i="c3r">Ongoing engagement. The new store is built and in preview; I'll publish results here once there are numbers worth showing.</p>
+        <div class="stack"><span class="chip">Premiere</span><span class="chip">CapCut</span><span class="chip">Shopify</span><span class="chip">Meta Ads</span><span class="chip">Google Ads</span><span class="chip">Power BI</span></div>
+      </div>
+    </div>
+    <div class="fig cho">
+      <figure><div class="browser"><div class="bar"><i></i><i></i><i></i><span>chololoy · store preview</span></div><img src="img/chololoy-home.webp" width="1600" height="1000" loading="lazy" alt="Chololoy website redesign: homepage hero with tortilla soup"></div><figcaption class="cap"><b>Fig. 6</b><span data-i="fig6">New homepage, store preview.</span></figcaption></figure>
+      <div class="side">
+        <figure><div class="frame"><img src="img/chololoy-recipes.webp" width="900" height="580" loading="lazy" alt="Chololoy recipe library grid with real dish photos"></div><figcaption class="cap"><b>Fig. 7</b><span data-i="fig7">Recipe library.</span></figcaption></figure>
+        <figure><div class="mob"><img src="img/chololoy-mobile.webp" width="520" height="1125" loading="lazy" alt="Chololoy homepage on mobile"></div><figcaption class="cap"><b>Fig. 8</b><span data-i="fig8">Mobile.</span></figcaption></figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CASE 04 -->
+<section class="sec" id="case-tampico">
+  <div class="wrap">
+    <div class="case-head">
+      <div class="top-line eyebrow"><span><span class="n">Case 04</span> · Tampico Terrenos</span><span>2026</span></div>
+      <h2 class="h2" data-i="c4h">Which lot pays back? <em>Ask the map.</em></h2>
+      <p class="client" data-i="c4c">An interactive catalog for land investment in Tampico, Mexico.</p>
+    </div>
+    <div class="pbr">
+      <div><h4 data-i="lProb4">Problem</h4><p data-i="c4p">Each property's market study was a PDF. Comparing lots meant copying cost and sales figures by hand, and nobody could see them side by side on a map.</p></div>
+      <div><h4 data-i="lBuilt4">What I built</h4>
+        <ul>
+          <li data-i="c4b1">An interactive catalog and 3D map (React, Vite, MapLibre GL).</li>
+          <li data-i="c4b2">Each lot shows its cost, sales, profit and ROI, and the highest-ROI listings are highlighted.</li>
+          <li data-i="c4b3">Python scripts extract the figures from the PDF studies; Playwright collects listing photos.</li>
+        </ul>
+      </div>
+      <div><h4 data-i="lRes4">Result</h4><p data-i="c4r">No manual data entry. The investment case for each lot is one click away, and the best candidates stand out on the map.</p>
+        <div class="stack"><span class="chip">React + Vite</span><span class="chip">MapLibre GL</span><span class="chip">Python</span><span class="chip">Playwright</span></div>
+      </div>
+    </div>
+    <div class="fig">
+      <div class="map">
+        <svg viewBox="0 0 560 300" role="img" aria-label="Schematic of lots on a map, one highlighted as highest ROI">
+          <defs><pattern id="gr" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="#EDE8DD" stroke-width="1"/></pattern></defs>
+          <rect width="560" height="300" fill="url(#gr)"/>
+          <path d="M-10 230 C120 200 200 260 330 220 S520 170 580 190" fill="none" stroke="#C9BFAC" stroke-width="10" stroke-linecap="round"/>
+          <path d="M150 -10 L190 310" stroke="#DAD2C3" stroke-width="6"/>
+          <g fill="#FCFBF8" stroke="#6B655B" stroke-width="1.2">
+            <path d="M40 40 L130 30 L140 100 L50 112 Z"/><path d="M50 122 L140 110 L148 170 L58 184 Z"/>
+            <path d="M210 30 L300 24 L306 92 L214 98 Z"/><path d="M320 22 L420 16 L428 84 L326 90 Z"/>
+            <path d="M440 16 L530 12 L534 80 L446 84 Z"/><path d="M216 108 L308 102 L312 168 L220 174 Z"/>
+            <path d="M436 96 L536 92 L540 150 L440 156 Z"/>
+          </g>
+          <path d="M326 100 L428 94 L432 160 L330 166 Z" fill="#1F7A4C" fill-opacity=".16" stroke="#1F7A4C" stroke-width="2"/>
+          <g transform="translate(379 128)"><circle r="16" fill="#1F7A4C"/><path d="M-6 3 L-1 -3 L3 1 L8 -6" stroke="#fff" stroke-width="2" fill="none"/></g>
+          <g font-family="IBM Plex Mono,monospace" font-size="10" fill="#6B655B"><text x="44" y="56">L-01</text><text x="54" y="138">L-02</text><text x="214" y="46">L-03</text><text x="324" y="38">L-04</text><text x="444" y="32">L-05</text><text x="220" y="124">L-06</text><text x="440" y="112">L-08</text><text x="334" y="116" fill="#1F7A4C">L-07</text></g>
+        </svg>
+        <div>
+          <div class="lotcard">
+            <h5 style="margin-top:14px" data-i="lot">Lot L-07 · highest ROI</h5>
+            <div class="row"><span data-i="rc">Cost</span><div class="bar"><i style="width:48%"></i></div></div>
+            <div class="row"><span data-i="rs">Sales</span><div class="bar"><i style="width:82%"></i></div></div>
+            <div class="row"><span data-i="rp">Profit</span><div class="bar"><i style="width:60%"></i></div></div>
+            <div class="row roi"><span>ROI</span><div class="bar"><i style="width:74%"></i></div></div>
+          </div>
+          <p class="small" style="margin-top:14px" data-i="c4note">Schematic redrawn for this page. The real catalog uses the client's data, which stays private.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MORE -->
+<section class="sec">
+  <div class="wrap">
+    <p class="eyebrow"><span class="n">§ 02</span> · <span data-i="alsoE">Also</span></p>
+    <h2 class="h3" style="margin-top:18px;max-width:22em" data-i="alsoH">Smaller pieces that show <em>how I think about data and channels.</em></h2>
+    <ul class="more">
+      <li><span class="eyebrow">2025 · <a class="link" href="https://github.com/Edubikes/Valuador" target="_blank" rel="noopener">GitHub</a></span><b data-i="m1t">Valuador: Methodological Authenticity Index</b><p data-i="m1p">Python / Streamlit / pandas tool that scores market-research surveys for cognitive biases. Used in my university research paper to audit the “New Coke” case.</p></li>
+      <li><span class="eyebrow">2026 · Ibero León</span><b data-i="m2t">Marketing analytics dashboard</b><p data-i="m2p">A marketing and advertising dashboard in Power BI, with DAX measures.</p></li>
+      <li><span class="eyebrow">2025 · <span data-i="m3e">6-month internship</span></span><b data-i="m3t">Amazon &amp; Mercado Libre stores</b><p data-i="m3p">Ran the official stores for Distribuidora de León: listing SEO, digital inventory, and 100% online customer service and disputes, keeping gold/green reputation on both.</p></li>
+    </ul>
+  </div>
+</section>
+
+<!-- NZ -->
+<section class="sec nz" id="about">
+  <div class="wrap">
+    <p class="eyebrow"><span class="n">§ 03</span> · <span data-i="nzE">Before the code</span></p>
+    <div class="nz-grid" style="margin-top:24px">
+      <div>
+        <h2 class="h2" data-i="nzH">From kitchen porter to <em>branch manager</em> in New Zealand, in under two years.</h2>
+        <div class="body" style="margin-top:24px;max-width:34em">
+          <p data-i="nzP1">In 2023 I moved to New Zealand and started washing dishes at La Mexicana. By 2025 I was running the branch: staff rosters, inventory, relationships with local customers, all in English and without a manager looking over my shoulder.</p>
+          <p data-i="nzP2">That's where I learned what I now build for: how a real business runs day to day, and how little patience its people have for tools that don't help.</p>
+        </div>
+      </div>
+      <ol class="ladder">
+        <li><span>2023</span><b data-i="nz1">Kitchen porter</b></li>
+        <li><span>→</span><b data-i="nz2">Operational roles</b></li>
+        <li><span>2025</span><b data-i="nz3">Branch manager</b><p data-i="nz3p">Staff, rosters, inventory, customers. 100% English.</p></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section class="sec" id="skills">
+  <div class="wrap">
+    <p class="eyebrow"><span class="n">§ 04</span> · <span data-i="skE">Skills &amp; tools</span></p>
+    <h2 class="h3" style="margin-top:18px;max-width:22em" data-i="skH">Half marketer, half builder. <em>Both halves ship.</em></h2>
+    <div class="skills">
+      <div><h3 data-i="sk1">Growth &amp; marketing</h3><ul><li class="chip">Meta Ads</li><li class="chip">Google Ads</li><li class="chip">Growth marketing</li><li class="chip">Campaign planning</li><li class="chip">E-commerce SEO</li><li class="chip">Amazon</li><li class="chip">Mercado Libre</li><li class="chip">Premiere</li><li class="chip">CapCut</li></ul></div>
+      <div><h3 data-i="sk2">Build (AI-assisted)</h3><ul><li class="chip">Claude Code</li><li class="chip">Gemini</li><li class="chip">Antigravity IDE</li><li class="chip">Prompt engineering</li><li class="chip">HTML / CSS / JS</li><li class="chip">React</li><li class="chip">Next.js</li><li class="chip">TypeScript</li><li class="chip">Tailwind</li><li class="chip">Firebase</li><li class="chip">Git / GitHub</li><li class="chip">Vercel</li></ul></div>
+      <div><h3 data-i="sk3">Data &amp; automation</h3><ul><li class="chip">Power BI (DAX)</li><li class="chip">Python</li><li class="chip">pandas</li><li class="chip">Streamlit</li><li class="chip">Playwright</li><li class="chip">ERP systems</li><li class="chip">Data analysis</li></ul></div>
+      <div><h3 data-i="sk4">Working style</h3><ul><li class="chip" data-i="w1">Async communication</li><li class="chip" data-i="w2">Autonomous</li><li class="chip" data-i="w3">Cross-cultural</li><li class="chip" data-i="w4">Fast software learner</li><li class="chip" data-i="w5">EN / ES bilingual</li></ul></div>
+    </div>
+    <ol class="timeline" aria-label="Experience">
+      <li><span class="y">2026 – </span><span class="r" data-i="e1">Technical Marketer &amp; Web Designer</span><span class="o" data-i="e1o">Chololoy · freelance</span></li>
+      <li><span class="y">2025 – 2026</span><span class="r" data-i="e2">Software Developer &amp; Operations Automator (AI-assisted)</span><span class="o" data-i="e2o">SICESA · construction</span></li>
+      <li><span class="y">2025</span><span class="r" data-i="e3">E-commerce &amp; Marketplace Coordinator</span><span class="o" data-i="e3o">Distribuidora de León · internship</span></li>
+      <li><span class="y">2023 – 2025</span><span class="r" data-i="e4">Branch Manager (from Kitchen Porter)</span><span class="o">La Mexicana NZ · New Zealand</span></li>
+      <li><span class="y">2020 – 2026</span><span class="r" data-i="e5">BA Marketing &amp; Advertising</span><span class="o">Universidad Iberoamericana León</span></li>
+    </ol>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="sec contact" id="contact">
+  <div class="wrap">
+    <p class="eyebrow">§ 05 · <span data-i="ctE">Contact</span></p>
+    <h2 class="h1" style="margin-top:24px" data-i="ctH">Got a process that still runs on <em>paper and chat?</em></h2>
+    <p class="lead" style="margin-top:24px" data-i="ctL">I'm open to remote roles in growth, technical marketing and AI automation. The fastest way to reach me is email or WhatsApp.</p>
+    <div class="ctas" style="margin-top:32px">
+      <a class="btn btn--light" href="mailto:edusolorior7@gmail.com"><span data-i="ctB1">Email me</span> <span class="arrow" aria-hidden="true">→</span></a>
+      <a class="btn btn--line" href="Eduardo_Solorio_CV_EN.pdf" download><span data-i="ctB2">Download CV (PDF, EN)</span></a>
+    </div>
+    <div class="clist">
+      <a href="mailto:edusolorior7@gmail.com"><span class="k">Email</span><span class="v">edusolorior7@gmail.com</span><span aria-hidden="true">→</span></a>
+      <a href="https://wa.me/524775588302" target="_blank" rel="noopener"><span class="k">WhatsApp</span><span class="v">+52 477 558 8302</span><span aria-hidden="true">→</span></a>
+      <a href="https://www.linkedin.com/in/eduardo-solorio-92b6ba333" target="_blank" rel="noopener"><span class="k">LinkedIn</span><span class="v">Eduardo Solorio</span><span aria-hidden="true">→</span></a>
+      <a href="Eduardo_Solorio_CV_EN.pdf" download><span class="k">CV</span><span class="v">Eduardo_Solorio_CV_EN.pdf</span><span aria-hidden="true">↓</span></a>
+    </div>
+  </div>
+</section>
+</main>
+<footer><div class="wrap"><span>© 2026 Eduardo Solorio Rebollo</span><span data-i="foot">León, Mexico · Designed and built with AI coding tools</span></div></footer>
+
+<script>
+(function(){
+var ES={
+role:"Technical Marketer y Growth Engineer",nWork:"Trabajo",nAbout:"Sobre mí",nSkills:"Habilidades",nContact:"Contacto",cvBtn:"Descargar CV",
+loc:"León, MX · Remoto",role2:"Technical Marketer y Growth Engineer",
+h1:"IA y código, <em>trabajando</em> en negocios reales.",
+lead:"Soy Technical Marketer y Growth Engineer bilingüe. Me muevo entre las herramientas de IA y los negocios que todavía operan con papel y WhatsApp (construcción, logística, marketing) y entrego cosas que funcionan el lunes en la mañana.",
+ctaWork:"Ver el trabajo",mBased:"Ubicación",mBasedV:"León, Guanajuato, MX",mLang:"Idiomas",mLangV:"Inglés y español, bilingüe",mEdu:"Estudios",mEduV:"Lic. en Mercadotecnia y Publicidad, Ibero León, 2026",mWork:"Modalidad",mWorkV:"Remoto, asíncrono",
+selWork:"Trabajo seleccionado",t1:"De foto del ticket a factura, con un agente de IA",t2:"App de reportes de obra para constructora",t3:"Contenido, sitio y anuncios para una marca de sazonador en EE. UU.",t4:"Catálogo de inversión en terrenos con mapa 3D",sConst:"Construcción",sConst2:"Construcción",sFood:"Alimentos",sRE:"Bienes raíces",
+approach:"Construyo con herramientas de IA para programar, y lo digo abiertamente. <em>Mi ventaja no es teclear código más rápido;</em> es entender el problema del negocio, dirigir a la IA con precisión y revisar el resultado donde de verdad se usa: en la obra, en un grupo de WhatsApp, en una cuenta de anuncios.",
+daily:"Herramientas diarias",
+c1h:"Tickets de caja chica que <em>se facturan solos.</em>",c1c:"SICESA es una constructora en México. El personal de campo paga combustible, ferretería e insumos con caja chica, y cada ticket necesita su factura CFDI.",
+lProb:"Problema",lBuilt:"Lo que construí",lRes:"Resultado",lProb2:"Problema",lBuilt2:"Lo que construí",lRes2:"Resultado",lProb3:"Problema",lBuilt3:"Lo que estoy haciendo",lRes3:"Estado",lProb4:"Problema",lBuilt4:"Lo que construí",lRes4:"Resultado",
+c1p:"Cada CFDI se pide en el portal de facturación de cada comercio, ticket por ticket. Los tickets andan en las bolsas y las facturas se pierden en el camino.",
+c1b1:"Un flujo con agente de IA sobre la herramienta que el equipo ya usa: un grupo de WhatsApp.",c1b2:"El personal manda la foto del ticket. El agente la lee y emite el CFDI en el portal de ese comercio.",c1b3:"El PDF de la factura se publica de vuelta en el mismo chat.",c1b4:"Cada semana arma el reporte de caja chica en Excel.",
+k1:"horas ahorradas cada semana",k2:"facturas perdidas",
+f1:"Foto",f1p:"El personal toma foto del ticket. Es todo lo que hace.",f2:"WhatsApp",f2p:"Al grupo que ya usan. Sin app nueva.",f3:"CFDI emitido",f3p:"El agente llena el portal de facturación del comercio.",f4:"PDF + Excel",f4p:"PDF de vuelta en el chat; reporte semanal de caja chica.",
+fig1:"Una semana real de tickets, desenfocada a propósito: sin RFC, montos ni folios.",fig2:"El tipo de obra de donde salen esos tickets.",
+c2h:"Todas las obras, <em>una pantalla,</em> un PDF semanal.",c2c:"Una app web instalable para ingenieros de obra, oficina y cliente, hecha con herramientas de IA sobre un stack de producción. <a class=\"link\" href=\"https://sicesa-app.vercel.app\" target=\"_blank\" rel=\"noopener\">sicesa-app.vercel.app</a>",
+c2p:"El avance vivía en fotos regadas en celulares y chats. Convertirlas en reporte tomaba horas de documentación manual, y los clientes tenían que llamar para saber cómo iba su obra.",
+c2b1:"Un tablero de <b>“todas las obras”</b>: avance, quién está en qué obra y qué obras no han mandado fotos.",c2b2:"Una <b>vista de cliente</b> donde cada cliente ve solo su obra.",c2b3:"Un <b>reporte semanal en PDF</b> de un toque, con fotos comprimidas en el navegador.",c2b4:"Bitácora diaria, incidencias, presupuestos tipo Excel con IVA automático, aprobación de materiales y acceso por roles.",
+c2r:"Los ingenieros suben fotos desde la obra y el reporte ejecutivo se genera solo, en lugar de horas de documentación manual. Los clientes siguen el avance en un solo canal en vez de llamar.",
+fig3:"Tablero “todas las obras”. Modo demostración, datos de ejemplo.",fig4:"PDF semanal listo en el celular.",fig5:"Vista de cliente: cada cliente ve solo su obra.",
+c3y:"2026 – actual",c3h:"Un sazonador familiar, <em>contado receta por receta.</em>",c3c:"Chololoy es una marca mexicana de sazonador que se vende en Estados Unidos, sobre todo a cocinas de restaurante. Proyecto freelance de marketing y web.",
+c3p:"Un producto que creció de boca en boca necesitaba contenido corto y un sitio hecho para chefs, compradores y cocineros de casa en EE. UU.",
+c3b1:"Producción y edición de video culinario corto para redes (Premiere, CapCut).",c3b2:"Rediseño del sitio: historia bilingüe, recetario, página de producto y solicitudes de mayoreo.",c3b3:"Campañas de Meta y Google Ads para la distribución en EE. UU.",c3b4:"Reportes de desempeño en Power BI.",
+c3s:"En curso",c3r:"Proyecto activo. La nueva tienda está construida y en vista previa; publicaré resultados aquí cuando haya números que valga la pena mostrar.",
+fig6:"Nueva página de inicio, vista previa de la tienda.",fig7:"Recetario.",fig8:"Móvil.",
+c4h:"¿Qué terreno se paga solo? <em>Pregúntale al mapa.</em>",c4c:"Un catálogo interactivo para invertir en terrenos en Tampico, México.",
+c4p:"El estudio de mercado de cada propiedad era un PDF. Comparar terrenos implicaba copiar costos y ventas a mano, y nadie podía verlos lado a lado en un mapa.",
+c4b1:"Un catálogo interactivo y mapa 3D (React, Vite, MapLibre GL).",c4b2:"Cada terreno muestra costo, ventas, utilidad y ROI, y se resaltan los de mayor ROI.",c4b3:"Scripts de Python extraen las cifras de los PDF; Playwright recopila las fotos de los anuncios.",
+c4r:"Cero captura manual. El caso de inversión de cada terreno está a un clic, y los mejores candidatos resaltan en el mapa.",
+lot:"Terreno L-07 · mayor ROI",rc:"Costo",rs:"Ventas",rp:"Utilidad",c4note:"Esquema redibujado para esta página. El catálogo real usa los datos del cliente, que son privados.",
+alsoE:"Además",alsoH:"Piezas más chicas que muestran <em>cómo pienso los datos y los canales.</em>",
+m1t:"Valuador: Índice de Autenticidad Metodológica",m1p:"Herramienta en Python / Streamlit / pandas que califica encuestas de mercado según sesgos cognitivos. La usé en mi investigación universitaria para auditar el caso “New Coke”.",
+m2t:"Dashboard de analítica de marketing",m2p:"Un dashboard de mercadotecnia y publicidad en Power BI, con medidas DAX.",
+m3e:"Prácticas, 6 meses",m3t:"Tiendas en Amazon y Mercado Libre",m3p:"Manejé las tiendas oficiales de Distribuidora de León: SEO de publicaciones, inventario digital y atención y disputas 100% en línea, manteniendo reputación oro/verde en ambas.",
+nzE:"Antes del código",nzH:"De lavaplatos a <em>gerente de sucursal</em> en Nueva Zelanda, en menos de dos años.",
+nzP1:"En 2023 me fui a Nueva Zelanda y empecé lavando platos en La Mexicana. Para 2025 dirigía la sucursal: turnos del personal, inventario y relación con clientes locales, todo en inglés y sin un jefe encima.",
+nzP2:"Ahí aprendí para quién construyo hoy: cómo opera un negocio real día a día, y la poca paciencia que tiene su gente con herramientas que no ayudan.",
+nz1:"Lavaplatos (kitchen porter)",nz2:"Puestos operativos",nz3:"Gerente de sucursal",nz3p:"Personal, turnos, inventario, clientes. 100% en inglés.",
+skE:"Habilidades y herramientas",skH:"Mitad marketer, mitad constructor. <em>Las dos mitades entregan.</em>",sk1:"Growth y marketing",sk2:"Desarrollo (con IA)",sk3:"Datos y automatización",sk4:"Forma de trabajo",
+w1:"Comunicación asíncrona",w2:"Autónomo",w3:"Intercultural",w4:"Aprendo software rápido",w5:"Bilingüe EN / ES",
+e1:"Technical Marketer y Diseñador Web",e1o:"Chololoy · freelance",e2:"Desarrollador de software y automatización de operaciones (con IA)",e2o:"SICESA · construcción",e3:"Coordinador de e-commerce y marketplaces",e3o:"Distribuidora de León · prácticas",e4:"Gerente de sucursal (desde lavaplatos)",e5:"Lic. en Mercadotecnia y Publicidad",
+ctE:"Contacto",ctH:"¿Tienes un proceso que sigue corriendo en <em>papel y chat?</em>",ctL:"Busco roles remotos en growth, marketing técnico y automatización con IA. La forma más rápida de contactarme es por correo o WhatsApp.",ctB1:"Escríbeme",ctB2:"Descargar CV (PDF, inglés)",
+foot:"León, México · Diseñado y construido con herramientas de IA"
+};
+var EN={},els=document.querySelectorAll("[data-i]");
+els.forEach(function(e){EN[e.dataset.i]=e.innerHTML});
+function set(l){
+  els.forEach(function(e){var k=e.dataset.i,v=(l==="es"?ES:EN)[k];if(v!=null)e.innerHTML=v});
+  document.documentElement.lang=l;document.documentElement.dataset.lang=l;
+  document.querySelectorAll(".lang button").forEach(function(b){b.setAttribute("aria-pressed",b.dataset.set===l)});
+  try{localStorage.setItem("lang",l)}catch(_){}
+}
+document.querySelectorAll(".lang button").forEach(function(b){b.addEventListener("click",function(){set(b.dataset.set)})});
+var q=new URLSearchParams(location.search).get("lang"),s=null;try{s=localStorage.getItem("lang")}catch(_){}
+if(q==="es"||(!q&&s==="es"))set("es");
+})();
+</script>
+</body>
+</html>
